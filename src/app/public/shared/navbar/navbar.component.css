@@ -1,0 +1,14 @@
+#my-navbar {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+}
+
+.text {
+    color: rgb(253, 126, 20);
+}
+
+#log {
+    background-color: #fd9843;
+}

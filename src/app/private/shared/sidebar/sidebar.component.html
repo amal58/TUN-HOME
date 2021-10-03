@@ -1,0 +1,64 @@
+<ul class="navbar-nav bg-gradient-warning sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center">
+        <div class="sidebar-brand-icon rotate-n-15">
+            <!--  <i class="fas fa-laugh-wink"></i>-->
+            <img src="./assets/images/img2.png" class="bg-light" alt="logo agency" width="100px">
+        </div>
+        <div class="sidebar-brand-text mx-3">TUN-Home</div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/dashboard']">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+    <!-- Admin items -->
+
+    <li *ngIf="isAdmin" class="nav-item">
+        <a class="nav-link" [routerLink]="['/admin/category/list']">
+            <i class="fab fa-elementor"></i>
+            <span>Categories Management</span></a>
+    </li>
+    <li *ngIf="isAdmin" class="nav-item">
+        <a class="nav-link" [routerLink]="['/admin/offer/list']">
+            <i class="fab fa-product-hunt"></i>
+            <span>Offers Management</span></a>
+    </li>
+    <li *ngIf="isAdmin" class="nav-item">
+        <a class="nav-link" [routerLink]="['/client/client-management']">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Clients Management</span></a>
+    </li>
+    <li *ngIf="isAdmin" class="nav-item">
+        <a class="nav-link" [routerLink]="['/demand/list']">
+            <i class="fas fa-fw fa-tasks"></i>
+            <span>Demand Management</span></a>
+    </li>
+
+
+    <!-- Clients items -->
+
+    <li *ngIf="isClient" class="nav-item">
+        <a class="nav-link" [routerLink]="['/myorders']">
+            <i class="fas fa-fw fa-tasks"></i>
+            <span>My demands</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+</ul>

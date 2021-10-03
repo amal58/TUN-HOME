@@ -1,0 +1,55 @@
+<nav id="my-navbar" class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container">
+        <img src="./assets/images/img2.png" alt="logo agency" width="100px">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--m:margin p padding -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="./index.html"> Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#my-team"> About </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " [routerLink]="['/contact']"> Contact </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="#my-cat"> categories </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " [routerLink]="['/houses']"> houses </a>
+                </li>
+
+                <li class="nav-item">
+                    <a *ngIf="isLoggedIn" class="nav-link " [routerLink]="['/dashboard']"> Dashboard</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a *ngIf="!isLoggedIn" class="btn btn-sm  btn-warning mt-1 text-white me-3" [routerLink]="['/login']"> Login </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a *ngIf="!isLoggedIn" class="btn btn-sm btn-warning mt-1 me-3" [routerLink]="['/register']">Register</a>
+                </li>
+
+                <li class="nav-item">
+                    <a *ngIf="isLoggedIn" id="log" class="btn btn-sm  mt-1 me-3" (click)="logout()" href="#">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a id="my-btn" class="btn btn-sm btn-dark mt-1 me-3">
+                        <i id="my-icon" class="fas fa-moon"> </i>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>

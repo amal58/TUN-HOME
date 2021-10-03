@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+
+<div class="login-page ">
+    <br><br><br> <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+
+                <div class="bg-white shadow rounded">
+                    <div class="row">
+                        <div class="col-md-7 pe-0">
+                            <div class="form-left h-100 py-5 px-5">
+                                <form class="row g-4" [formGroup]="loginForm" (ngSubmit)="login()">
+
+                                    <div class="col-12">
+                                        <label>Email<span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                            <input type="text" class="form-control" placeholder="Enter Username" formControlName="email">
+
+                                        </div>
+                                        <div *ngIf="email?.touched && email?.invalid">
+                                            <small *ngIf="email?.errors?.required" class="text-danger">email is required <br></small>
+                                            <small *ngIf="email?.errors?.email" class="text-danger">Invalid email  </small>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label>Password<span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                            <input type="text" class="form-control" placeholder="Enter Password" formControlName="password">
+                                        </div>
+                                        <div *ngIf="password?.touched && password?.invalid">
+                                            <small *ngIf="password?.errors?.required" class="text-danger">password is required <br></small>
+                                            <small *ngIf="password?.errors?.minlength" class="text-danger">password must contain 6 charactors at least </small>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="col-sm-6">
+                                        <a href="#" class="float-end text-warning">Forgot Password?</a>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-warning px-4 float-end mt-4" [disabled]="loginForm.invalid">login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-5 ps-0 d-none d-md-block">
+                            <div class="form-right h-100 bg-warning text-white text-center pt-5">
+                                <i class="bi bi-bootstrap"></i>
+                                <h2 class="fs-1">Welcome!!</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<app-footer></app-footer>

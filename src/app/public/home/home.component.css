@@ -1,0 +1,63 @@
+.column-left {
+    min-height: 750px;
+    background-position: 0px 0px, 100% 50%;
+    background-size: auto, cover;
+    background-attachment: scroll, scroll;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.column-right .section-title {
+    margin-top: 10px;
+    padding: 5rem 2rem 0rem 5rem;
+    font-size: 1rem;
+    color: #fd9843;
+    font-weight: 500;
+}
+
+.column-right .set {
+    color: #fd9843;
+    padding: 5rem 2rem 0rem 5rem;
+    font-size: 2rem;
+}
+
+.column-right .paragraph {
+    margin-top: 10px;
+    padding: 1rem 5rem 1rem 5rem;
+    font-size: 1.1rem;
+    color: #b1b4bd;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.paragraph {
+    margin-top: 10px;
+    padding: 1rem 5rem 1rem 5rem;
+    font-size: 1.1rem;
+    color: #b1b4bd;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.gotopbtn .fa {
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.gotopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    background: #f6faf8;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+}
+
+.gotopbtn:hover {
+    background-color: #fd9843;
+    color: black;
+}
